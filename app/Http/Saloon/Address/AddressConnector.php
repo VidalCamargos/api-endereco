@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Saloon\Address;
+namespace App\Http\Saloon\Address;
 
 
 use App\Http\Middleware\GuzzleTracingMiddleware;

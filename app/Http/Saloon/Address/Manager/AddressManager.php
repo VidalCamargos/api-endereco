@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Saloon\Address\Manager;
+namespace App\Http\Saloon\Address\Manager;
 
-use App\Saloon\Address\AddressConnector;
-use App\Saloon\Address\Requests\ViaCep;
+use App\Http\Saloon\Address\AddressConnector;
+use App\Http\Saloon\Address\Requests\ViaCep;
 
 class AddressManager
 {

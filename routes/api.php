@@ -10,5 +10,5 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-$router->get('/address', [AddressController::class, 'getAddress'])
+$router->get('/address/{zipCode}', [AddressController::class, 'getAddress'])
     ->name('address');

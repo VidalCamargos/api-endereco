@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Saloon\Address\Manager\AddressManager;
+use App\Http\Saloon\Address\Manager\AddressManager;
 use Illuminate\Http\JsonResponse;
 use Throwable;
 
@@ -12,12 +12,11 @@ class AddressController
     {
     }
 
-    public function getAddress(): JsonResponse
+    public function getAddress(string $zipCode): JsonResponse
     {
         try {
-            return response()->json($this->addressManager->getAddressByZipCode('32671412'));
+            return response()->json($this->addressManager->getAddressByZipCode($zipCode));
         } catch (Throwable $exception) {
-            dd($exception->getMessage());
             return response()->json('Ocorreu um erro ao tentar buscar pelo endereço.', $exception->getCode());
         }
     }
